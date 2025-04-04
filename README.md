@@ -1,5 +1,5 @@
 # NetSweep
-a lightweight, Bash-based network alerting tool designed for internal network monitoring. It scans your local subnet for unknown devices, compares them against a trusted devices list, and takes one of two actions:
+NetSweep is a lightweight, Bash-based network alerting tool designed for internal network monitoring. It scans your local subnet for unknown devices, compares them against a trusted devices list, and takes one of two actions:
 
 - **Interactive Mode:** When run manually, it displays the unknown devices and prompts you to add them to the trusted list.
 - **Automatic Mode:** When run in a non-interactive environment (such as via systemd), it sends email alerts for any new, untrusted devices and logs detailed scan information.
