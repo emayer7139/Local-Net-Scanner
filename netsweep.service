@@ -1,8 +1,8 @@
 [Unit]
 Description=NetSweep - Rogue Device Scanner
 
-[Service]
+[Service] # msmtp can have issues locating the correct config file so setting the home environment variable in your service file is a good fix.
 Type=oneshot
-WorkingDirectory=/home/kali/Documents/projects/netsweep
-ExecStart=/home/kali/Documents/projects/netsweep/netsweep.sh
-Environment=HOME=/home/kali
+WorkingDirectory=/Path/To/Your/Project/netsweep
+ExecStart=/Path/To/Your/Project/netsweep/netsweep.sh
+Environment=HOME=/Your/Path
