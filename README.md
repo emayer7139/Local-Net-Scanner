@@ -1,4 +1,4 @@
-# Local-Net-Scanner
+# NetSweep
 a lightweight, Bash-based network alerting tool designed for internal network monitoring. It scans your local subnet for unknown devices, compares them against a trusted devices list, and takes one of two actions:
 
 - **Interactive Mode:** When run manually, it displays the unknown devices and prompts you to add them to the trusted list.
@@ -22,6 +22,17 @@ a lightweight, Bash-based network alerting tool designed for internal network mo
   - nmap
   - msmtp (with proper configuration in ~/.msmtprc)
 - Privileges: Some commands (e.g., arp-scan, nmap) require root privileges. The script automatically escalates when needed.
+
+## Issues
+
+msmtp automatically reads your SMTP configuration from your ~/.msmtprc file. However, it does not inherit the full user environment by default causing the HOME environment variable to not be set. 
+
+This can result in errors such as:
+/home/yourusername/.msmtprc: line 11: user: command not found
+
+To ensure that msmtp finds your ~/.msmtprc configuration file when running under systemd, you need to explicitly set the HOME environment variable in your service file. For example, in your netsweep.service file, add the following line in the [Service] section:
+
+Environment=HOME=/home/yourusername
 
 ## Installation
 
