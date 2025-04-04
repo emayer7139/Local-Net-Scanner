@@ -1,0 +1,8 @@
+[Unit]
+Description=NetSweep - Rogue Device Scanner
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/kali/Documents/projects/netsweep
+ExecStart=/home/kali/Documents/projects/netsweep/netsweep.sh
+Environment=HOME=/home/kali
