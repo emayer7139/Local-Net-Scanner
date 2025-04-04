@@ -40,4 +40,4 @@ NetSweep is a lightweight, Bash-based network alerting tool designed for interna
 
    ```bash
    git clone https://github.com/emayer7139/netsweep.git
-   cd netsweep
+
