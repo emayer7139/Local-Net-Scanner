@@ -25,14 +25,14 @@ a lightweight, Bash-based network alerting tool designed for internal network mo
 
 ## Issues
 
-msmtp automatically reads your SMTP configuration from your ~/.msmtprc file. However, it does not inherit the full user environment by default causing the HOME environment variable to not be set. 
+- msmtp automatically reads your SMTP configuration from your ~/.msmtprc file. However, it does not inherit the full user environment by default causing the HOME environment variable to not be set. 
 
-This can result in errors such as:
-/home/yourusername/.msmtprc: line 11: user: command not found
+- This can result in errors such as:
+    /home/yourusername/.msmtprc: line 11: user: command not found
 
-To ensure that msmtp finds your ~/.msmtprc configuration file when running under systemd, you need to explicitly set the HOME environment variable in your service file. For example, in your netsweep.service file, add the following line in the [Service] section:
+- To ensure that msmtp finds your ~/.msmtprc configuration file when running under systemd, you need to explicitly set the HOME environment variable in your service file. For example, in your netsweep.service file, add the following line in the [Service] section:
 
-Environment=HOME=/home/yourusername
+    Environment=HOME=/home/yourusername
 
 ## Installation
 
