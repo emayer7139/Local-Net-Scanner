@@ -39,5 +39,5 @@ NetSweep is a lightweight, Bash-based network alerting tool designed for interna
 1. Clone the Repository:
 
    ```bash
-   git clone https://github.com/yourusername/netsweep.git
+   git clone https://github.com/emayer7139/netsweep.git
    cd netsweep
